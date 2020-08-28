@@ -3,7 +3,6 @@
 # Contents
 
 * [CUDA](CUDA) example
-  * CUDA event example [here](CUDA/event.md)
 
 You can use the [editor on GitHub](https://github.com/so07/docs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 

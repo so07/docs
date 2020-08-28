@@ -1,3 +1,4 @@
+# Simple example of events in CUDA
 
 ```c
 cudaEvent_t start, stop;
