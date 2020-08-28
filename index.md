@@ -1,8 +1,10 @@
 ## Welcome to GitHub Pages
 
+[this docs](https://so07.github.io/docs/)
+
 # Contents
 
-* [CUDA](CUDA) example
+* [CUDA](CUDA(index.md)) example
 
 You can use the [editor on GitHub](https://github.com/so07/docs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
