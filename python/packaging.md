@@ -153,7 +153,7 @@ setup(
     ...
 )
 ```
-### `PyPi` classifiers
+### `PyPI` classifiers
 
 ```python
 setup(
