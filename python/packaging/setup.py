@@ -26,6 +26,7 @@ setup(
     },
     setup_requires=[
         "bumpversion",
+        "twine",
     ],
     entry_points = {
         "console_scripts": [
