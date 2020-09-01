@@ -2,7 +2,10 @@ from setuptools import setup, find_packages
 
 # read the contents of your README file
 from os import path
-with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
+
+with open(
+    path.join(path.abspath(path.dirname(__file__)), "README.md"), encoding="utf-8"
+) as f:
     long_description = f.read()
 
 setup(
@@ -28,23 +31,23 @@ setup(
         "bumpversion",
         "twine",
     ],
-    entry_points = {
+    entry_points={
         "console_scripts": [
             "maxim=maxim.maxim:main",
         ],
     },
     classifiers=[
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 4 - Beta',
-        'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: Implementation :: PyPy',
-        'Topic :: Utilities',
+        "Development Status :: 4 - Beta",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Utilities",
     ],
 )
