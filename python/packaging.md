@@ -1,7 +1,5 @@
 # Packaging a python project
 
-#### https://blog.ionelmc.ro/2014/05/25/python-packaging/
-
 ## Packaging structure
 
 ```
@@ -140,4 +138,8 @@ pip install twine
 twine upload dist/*
 ```
 
+
+## References
+
+- https://blog.ionelmc.ro/2014/05/25/python-packaging/
 
