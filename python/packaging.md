@@ -270,5 +270,6 @@ twine upload dist/*
 
 ## References
 
+- https://gitlab.hpc.cineca.it/scai-training-rome/python-scientific
 - https://blog.ionelmc.ro/2014/05/25/python-packaging/
 
