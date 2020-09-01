@@ -1,4 +1,4 @@
-# CUDA example
+# Python example
 
 * [packaging](packaging.md)
 * [environment](environment.md)
