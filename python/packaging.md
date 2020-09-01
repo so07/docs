@@ -283,3 +283,7 @@ twine upload dist/*
 - https://gitlab.hpc.cineca.it/scai-training-rome/python-scientific
 - https://blog.ionelmc.ro/2014/05/25/python-packaging/
 
+### References to check
+- http://blog.habnab.it/blog/2013/07/21/python-packages-and-you/
+- https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
+
