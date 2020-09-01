@@ -1,6 +1,5 @@
 # Packaging a python project
 
-
 #### https://blog.ionelmc.ro/2014/05/25/python-packaging/
 
 ## Packaging structure
@@ -18,7 +17,13 @@
 
 ## ```setup.py``` file
 
-```
+In order to build, install and distribuite Python package the ```setuptools``` is commonly used. \
+First of all we have to produce a ```setup.py``` file and place it in the root directory of the project. \
+The ```setuptools``` package provides a function ```setup``` to build and install your package.
+
+
+
+```python
 from setuptools import setup, find_packages
 
 setup(
@@ -34,8 +39,9 @@ setup(
 )
 ```
 
+In the case of project that use ```src``` directory as the root directory of source codes the first argument of find_package is ```src``` directory.
 
-```
+```python
 from setuptools import setup, find_packages
 
 setup(
@@ -52,7 +58,9 @@ setup(
 )
 ```
 
-```
+```setuptools``` supports automatically installing dependency when building package defining ```install_requires``` argument to specify the dependency and the Python packages required.
+
+```python
 from setuptools import setup, find_packages
 
 setup(
@@ -75,7 +83,7 @@ A common approach is to use ```entry_point``` feature of ```setuptools```.
 
 A very useful type of entry point is ```console_script``` that allows Python functions to be registered as command-line executable.
 
-```
+```python
 from setuptools import setup, find_packages
 
 setup(
@@ -89,8 +97,9 @@ setup(
 )
 ```
 
-the complete example
-```
+the complete example ```setup.py``` file
+
+```python
 from setuptools import setup, find_packages
 
 setup(
@@ -115,19 +124,19 @@ setup(
 
 ## Publish on ```PyPi```
 
-```
+```shell
 python setup.py register
 ```
 
-```
+```shell
 python setup.py sdist
 ```
 
-```
+```shell
 pip install twine
 ```
 
-```
+```shell
 twine upload dist/*
 ```
 
