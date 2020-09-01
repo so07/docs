@@ -143,6 +143,31 @@ setup(
     ...
 )
 ```
+### `PyPi` classifiers
+
+```python
+setup(
+    ...
+    classifiers=[
+        # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: Unix',
+        'Operating System :: POSIX',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Topic :: Utilities',
+    ],
+    ...
+)
+```
 
 ### Other requirements
 
@@ -173,18 +198,32 @@ the complete example `setup.py` file
 ```python
 from setuptools import setup, find_packages
 
+# read the contents of your README file
+from os import path
+with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name="HerProject",
     version="1.0",
     author="so07",
     author_email="so07@mail.com",
     description="A simple description of HerProject project",
-    long_description="""A longer description of HerProject project.
-                        more details here""",
+    long_description=long_description,
     url="https://her_project_url.com",
     packages=find_packages("src"),
     package_dir={"": "src"},
-    install_requires=["required_package"],
+    install_requires=[
+        # eg: 'aspectlib==1.1.1', 'six>=1.7',
+    ],
+    extras_require={
+        # eg:
+        #   'rst': ['docutils>=0.11'],
+        #   ':python_version=="2.6"': ['argparse'],
+    },
+    setup_requires=[
+        #eg: 'pytest-runner',
+    ],
     entry_points = {
         "console_scripts": [
             "name=her_project.file:main'
