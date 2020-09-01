@@ -2,6 +2,7 @@
 
 ## Packaging structure
 
+The src directory structure is preferable
 ```
 ├─ src
 │  └─ packagename
@@ -12,13 +13,22 @@
 └─ setup.py
 ```
 
+The `src` directory is a better layout rather than the following
+
+```
+├─ packagename
+│  ├─ __init__.py
+│  └─ ...
+├─ tests
+│  └─ ...
+└─ setup.py
+```
 
 ## ```setup.py``` file
 
 In order to build, install and distribuite Python package the `setuptools` is commonly used. \
 First of all we have to produce a `setup.py` file and place it in the root directory of the project. \
 The `setuptools` package provides a function `setup` to build and install your package.
-
 
 
 ```python
@@ -249,7 +259,7 @@ setup(
 )
 ```
 
-## Publish on `PyPi`
+## Publish on `PyPI`
 
 ```shell
 python setup.py register
