@@ -33,7 +33,7 @@ setup(
     author_email="so07@mail.com",
     description="A simple description of HerProject project",
     long_description="""A longer description of HerProject project.
-                        more detaile here""",
+                        more details here""",
     url="https://her_project_url.com",
     packages=find_packages(),
 )
@@ -51,7 +51,7 @@ setup(
     author_email="so07@mail.com",
     description="A simple description of HerProject project",
     long_description="""A longer description of HerProject project.
-                        more detaile here""",
+                        more details here""",
     url="https://her_project_url.com",
     packages=find_packages("src"),
     package_dir={"": "src"},
@@ -70,7 +70,7 @@ setup(
     author_email="so07@mail.com",
     description="A simple description of HerProject project",
     long_description="""A longer description of HerProject project.
-                        more detaile here""",
+                        more details here""",
     url="https://her_project_url.com",
     packages=find_packages("src"),
     package_dir={"": "src"},
@@ -109,7 +109,7 @@ setup(
     author_email="so07@mail.com",
     description="A simple description of HerProject project",
     long_description="""A longer description of HerProject project.
-                        more detaile here""",
+                        more details here""",
     url="https://her_project_url.com",
     packages=find_packages("src"),
     package_dir={"": "src"},
