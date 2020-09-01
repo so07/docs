@@ -33,7 +33,7 @@ conda info --envs
 conda create --name her_conda
 ```
 
-``shell
+```shell
 conda create --name her_conda python=3.5
 ```
 
