@@ -91,7 +91,7 @@ setup(
     ...
     entry_points = {
         "console_scripts": [
-            "name=her_project.file:main'
+            "name=her_project.file:main"
         ],
     }
     ...
@@ -108,7 +108,7 @@ from setuptools import setup, find_packages
 # read the contents of your README file
 from os import path
 with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
-        long_description = f.read()
+    long_description = f.read()
 
 setup(
     ...
@@ -201,7 +201,7 @@ from setuptools import setup, find_packages
 # read the contents of your README file
 from os import path
 with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+    long_description = f.read()
 
 setup(
     name="HerProject",
@@ -226,7 +226,7 @@ setup(
     ],
     entry_points = {
         "console_scripts": [
-            "name=her_project.file:main'
+            "name=her_project.file:main",
         ],
     },
     classifiers=[
