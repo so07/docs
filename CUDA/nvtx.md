@@ -10,3 +10,7 @@ IF(USE_NVTX)
   ENDIF(HAVE_CUDA)
 ENDIF(USE_NVTX)
 ```
+
+## References
+
+- [https://developer.nvidia.com/blog/cuda-pro-tip-generate-custom-application-profile-timelines-nvtx/](https://developer.nvidia.com/blog/cuda-pro-tip-generate-custom-application-profile-timelines-nvtx/)
