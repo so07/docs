@@ -4,6 +4,8 @@
 
 ### Select row dataframe by value
 
+use [isin](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isin.html) method
+
 ```python
 >>> df = pd.DataFrame({'num_legs': [2, 4], 'num_wings': [2, 0]},
                       index=['falcon', 'dog'])
