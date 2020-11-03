@@ -54,3 +54,9 @@ To remove an environment
 ```shell
 conda env remove -n ENV_NAME
 ```
+
+NB: To prevent Conda from activating the base environment by default
+
+```shell
+conda config --set auto_activate_base false
+```
