@@ -49,3 +49,8 @@ conda deactivate
 conda install anaconda-clean
 anaconda-clean
 ```
+
+To remove an environment
+```shell
+conda env remove -n ENV_NAME
+```
