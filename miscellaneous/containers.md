@@ -10,8 +10,6 @@ Pull an image from a URI
 singularity pull --name tf-20.11 docker://nvcr.io/nvidia/tensorflow:20.11-tf2-py3
 ```
 
-### 
-
 #### ```shell```
 
 The ```shell``` command allows you to spawn a new shell within your container and interact with it as though it were a small virtual machine.
