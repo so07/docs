@@ -2,16 +2,41 @@
 
 ## Singularity
 
+### Download pre-built images
+
 Pull an image from a URI
 
 ```bash
-singularity pull tf-20.11 docker://nvcr.io/nvidia/tensorflow:20.11-tf2-py3
+singularity pull --name tf-20.11 docker://nvcr.io/nvidia/tensorflow:20.11-tf2-py3
 ```
 
-launch a Singularity container with user-bind path specification
+### 
+
+#### ```shell```
+
+The ```shell``` command allows you to spawn a new shell within your container and interact with it as though it were a small virtual machine.
+
+Launch a Singularity container with user-bind path specification
 ```bash
 singularity shell -B PATH --nv tf-20.11
 ```
+
+#### ```exec```
+
+The ```exec``` command allows you to execute a custom command within a container by specifying the image file
+
+```bash
+singularity exec tf-20.11 ls
+```
+
+#### ```run```
+
+Launch a Singularity container and execute a runscript if one is defined for that container.
+
+```bash
+singularity run tf-20.11
+```
+
 
 ## ENROOT
 
