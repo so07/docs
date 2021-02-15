@@ -1,3 +1,3 @@
 # Miscellaneous
 
-* [tunnel](tunnel.md)
+* [SSH tunnel](tunnel.md)
