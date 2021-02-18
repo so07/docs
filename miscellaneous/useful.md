@@ -1,4 +1,4 @@
-# /proc
+# `/proc`
 
 Every process in linux as a PID (process identifier), an integer number to uniquely identify an active process.\
 In `/proc/PID` there are a lot of info about process.
@@ -17,3 +17,22 @@ In `/proc/PID` there are a lot of info about process.
   kernel current stack of process
   
 see `man proc` for more info
+
+# `screen`
+
+`screen` is a window manager that multiplexes a physical terminal between several processes with terminal emulation.
+
+Start a new session
+```bash
+screen
+```
+
+List of all sessions
+```bash
+screen -ls
+```
+
+Attach to a not detached screen session
+```bash
+screen -x SESSION_ID
+```
