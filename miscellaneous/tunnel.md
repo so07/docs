@@ -14,3 +14,7 @@ go to ```HOST2``` and open jupyter notebook
 jupyter notebook --port=9999 --no-browser
 ```
 
+to kill process running on a port
+```bash
+lsof -ti:9999 | xargs kill -9
+```
