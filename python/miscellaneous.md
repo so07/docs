@@ -3,6 +3,8 @@
 execute command and print stdout
 
 ```python
+import subprocess
+
 def run(cmd):
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
     stdout = ""
