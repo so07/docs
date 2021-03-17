@@ -19,3 +19,17 @@ def run(cmd):
     rc = p.poll()
     return rc, stdout.strip()
 ```
+
+# `logging`
+
+```python
+import logging
+
+logger = logging.getLogger()
+
+def set_logging_verbosity(verbose):
+    level = logging.INFO
+    if verbose:
+        level = logging.DEBUG
+    logging.basicConfig(level=level)
+```
