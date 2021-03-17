@@ -32,4 +32,5 @@ def set_logging_verbosity(verbose):
     if verbose:
         level = logging.DEBUG
     logging.basicConfig(level=level)
+    #logging.basicConfig(format="#[%(asctime)s] >>> %(message)s", level=level)
 ```
