@@ -5,3 +5,4 @@
 * [testing](test.md)
 * [cli](cli.md)
 * [pandas](pandas.md)
+* [miscellaneous](miscellaneous.md)
