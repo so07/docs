@@ -17,6 +17,36 @@ Attach to a not detached screen session
 screen -x SESSION_ID
 ```
 
+# `tmux`
+
+Start a new session
+```bash
+tmux
+```
+
+Create a new named session
+```bash
+tmux new -s NAME
+```
+List of all sessions
+```bash
+tmux ls
+```
+
+Attaching to Tmux Session
+```bash
+tmux attach-session -t ID
+```
+```bash
+tmux a -t ID
+```
+
+Kill the session
+```bash
+tmux kill-session –t ID
+```
+
+
 # `/proc`
 
 Every process in linux as a PID (process identifier), an integer number to uniquely identify an active process.\
