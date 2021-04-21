@@ -33,12 +33,17 @@ List of all sessions
 tmux ls
 ```
 
-Attaching to Tmux Session
+Attaching to a Tmux Session
 ```bash
 tmux attach-session -t ID
 ```
 ```bash
 tmux a -t ID
+```
+
+Detaching from a Tmux Session
+```bash
+tmux detach
 ```
 
 Kill the session
