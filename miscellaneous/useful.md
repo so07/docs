@@ -19,6 +19,9 @@ screen -x SESSION_ID
 
 # `tmux`
 
+`tmux` is an open-source terminal multiplexer for Unix-like operating systems.
+It allows multiple terminal sessions to be accessed simultaneously in a single window.
+
 Start a new session
 ```bash
 tmux
@@ -33,7 +36,7 @@ List of all sessions
 tmux ls
 ```
 
-Attaching to a Tmux Session
+Attaching to a `tmux` Session
 ```bash
 tmux attach-session -t ID
 ```
@@ -41,7 +44,7 @@ tmux attach-session -t ID
 tmux a -t ID
 ```
 
-Detaching from a Tmux Session
+Detaching from a `tmux` Session
 ```bash
 tmux detach
 ```
