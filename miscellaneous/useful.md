@@ -54,7 +54,7 @@ Kill the session
 tmux kill-session –t ID
 ```
 
-### Share a tmux session
+### Share a `tmux` session
 
 Specify an alternative path to the server socket
 ```bash
