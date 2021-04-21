@@ -51,6 +51,23 @@ Kill the session
 tmux kill-session –t ID
 ```
 
+### Share a tmux session
+
+Specify an alternative path to the server socket
+```bash
+tmux -S /tmp/socket
+```
+
+Change its permission for other users to access
+```bash
+chmod 777 /tmp/socket
+```
+
+Other users to attach to the session
+```bash
+tmux -S /tmp/socket attach
+```
+
 
 # `/proc`
 
