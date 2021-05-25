@@ -38,7 +38,7 @@ def set_logging_verbosity(verbose):
 ```python
 logging.basicConfig(
     level=logging.WARNING,
-    format= '[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s',
+    format= '[%(asctime)s] [%(pathname)s:%(lineno)d] %(levelname)s - %(message)s',
     datefmt='%H:%M:%S'
 )
 ```
