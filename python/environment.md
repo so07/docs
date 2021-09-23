@@ -74,7 +74,12 @@ NB: To prevent Conda from activating the base environment by default
 conda config --set auto_activate_base false
 ```
 
-## Using pip in an environment
+Use the --prefix or -p option to specify where to write the environment files
+```shell
+conda create --prefix PATH
+```
+
+### Using pip in an environment
 
 To use pip in your environment
 ```shell
