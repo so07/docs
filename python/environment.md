@@ -1,24 +1,53 @@
 # Python environments
 
 
-## Virtualenvironment
+## Virtual environment
+
+A virtual environment is a self confinement Python packages installation that can coexist with other installations on the same system.
+Thus an application can not share dependency with other application.
+
+### virtual environment basic usage
+
+1. Create a virtual environment for a project
+1. Activate virtual environment
+1. Install packages and/or Execute commands
+1. When done deactivate virtual environment
+
+#### Create a virtual environment
 
 ```shell
 python3 -m venv her_env
 ```
 
+By default `venv` module does not include global Python site-packages directory.
+To create a virtual environment including global site-packages directory:
+
+```shell
+python -m venv --system-site-packages my_venv
+```
+
+#### Activate virtual environment
+
 ```shell
 source her_env/bin/activate
 ```
+
+#### Deactivate a virtual environment
 
 ```shell
 deactivate
 ```
 
+### The requirement file
+
+If you want to specify all dependencies and versions used in a project you can use a requirement file.
+A requirement file allows to specify which packages and versions should be installed for the project.
+
 ```shell
 pip freeze > requirements.txt
 ```
 
+Once you have a requirement file you can replicate the same environment in another system with the command `pip install` with `-r` option:
 ```shell
 pip install -r requirements.txt
 ```
