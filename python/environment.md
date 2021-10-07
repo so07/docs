@@ -54,6 +54,11 @@ pip install -r requirements.txt
 
 ## Conda
 
+
+```shell
+conda info
+```
+
 To see a list of all of your environments
 ```shell
 conda info --envs
@@ -115,3 +120,80 @@ To use pip in your environment
 conda install -n myenv pip
 conda activate myenv
 ```
+
+### Managing environments
+
+####  Specifying a location for an environment
+
+The location of an environment can be specified providing a path, with `--prefix`option, where the environment is created
+
+```shell
+conda create --prefix ./envs jupyterlab=0.35 matplotlib=3.1 numpy=1.16
+```
+
+in this way the name of the environment cannot be specified. To prevent long prefix in shell prompt the env_prompt setting in `.condarc` configuration file can be modified
+
+```shell
+conda config --set env_prompt '({name})'
+```
+
+#### Cloning an environment
+
+A conda environment can be cloned and an exact copy of the environment is created
+
+```shell
+conda create --name cloned_env --clone env_to_clone
+```
+
+#### Building identical conda environments
+
+In order to build identical conda environments an explicit list of all installed packages of an environment can be created
+
+```shell
+conda list --explicit
+```
+
+The list can be redirected on a file
+
+```shell
+conda list --explicit > spec-file.txt
+```
+
+The spec file can be used to create an identical environment
+
+```shell
+conda create --name myenv --file spec-file.txt
+```
+
+or to install all packages in an existing environment
+
+```shell
+conda install --name myenv --file spec-file.txt
+```
+
+#### View all packages in an environment
+
+To see a list of all packages installed in a specific environment
+
+```shell
+conda list -n myenv
+```
+
+To see if a specific package is installed in an environment
+
+```shell
+conda list -n myenv scipy
+```
+
+```shell
+conda info
+```
+
+####  Creating an environment from an environment.yml file
+
+```shell
+conda env create -f environment.yml
+```
+
+
+
