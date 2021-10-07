@@ -196,4 +196,69 @@ conda env create -f environment.yml
 ```
 
 
+### conda channel
+
+Conda channels are the locations where packages are stored. Conda packages are downloaded from remote channels, which are URLs to directories containing conda packages. The conda command searches a default set of channels and packages are automatically downloaded and updated from https://repo.anaconda.com/pkgs/. 
+
+By default, conda prefers packages from a higher priority channel over any version from a lower priority channel. 
+
+To add a new channel to the top of the channel list with the highest priority
+
+```shell
+conda config --add channels new_channel
+```
+
+or equivalent
+
+```shell
+conda config --prepend channels new_channel
+```
+
+To add a new channel to the bottom of the channel list with lowest priority
+
+```shell
+conda config --append channels new_channel
+```
+
+#### Creating custom channels
+
+Channels are the path that conda takes to look for packages. The easiest way to use and manage custom channels is to use a private or public repository on Anaconda.org. 
+
+If you do not wish to upload your packages to the Internet, you can build a custom repository served  locally using a `file://` URL.
+
+First of all `conda-build` has to be installed
+
+```shell
+conda install conda-build
+```
+
+Then the packages must be organized in subdirectories with different platforms
+
+```
+channel/
+linux-64/
+ package-1.0-0.tar.bz2
+linux-32/
+ package-1.0-0.tar.bz2
+osx-64/
+ package-1.0-0.tar.bz2
+win-64/
+ package-1.0-0.tar.bz2
+win-32/
+ package-1.0-0.tar.bz2
+```
+
+Finally `conda index` command must be run on the channel root directory
+
+```shell
+conda index channel/
+```
+
+
+To check if a package is available on a channel 
+
+```shell
+conda search --override-channels --channel the_channel the_package
+```
+
 
