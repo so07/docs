@@ -19,26 +19,3 @@ def run(cmd):
     rc = p.poll()
     return rc, stdout.strip()
 ```
-
-# `logging`
-
-```python
-import logging
-
-logger = logging.getLogger()
-
-def set_logging_verbosity(verbose):
-    level = logging.INFO
-    if verbose:
-        level = logging.DEBUG
-    logging.basicConfig(level=level)
-    #logging.basicConfig(format="#[%(asctime)s] >>> %(message)s", level=level)
-```
-
-```python
-logging.basicConfig(
-    level=logging.WARNING,
-    format= '[%(asctime)s] [%(pathname)s:%(lineno)d] %(levelname)s - %(message)s',
-    datefmt='%H:%M:%S'
-)
-```
