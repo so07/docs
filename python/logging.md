@@ -2,10 +2,10 @@
 
 ```python
 logging.basicConfig(
-    level=logging.WARNING,
-    format= '[%(asctime)s] [%(pathname)s:%(lineno)d] %(levelname)s - %(message)s',
+    level=logging.WARNING,
+    format= '[%(asctime)s] [%(pathname)s:%(lineno)d] %(levelname)s - %(message)s',
     #format="#[%(asctime)s] >>> %(message)s"
-    datefmt='%H:%M:%S'
+    datefmt='%H:%M:%S'
 )
 ```
 
@@ -34,6 +34,7 @@ def logger(name, verbose=False):
         format= '[%(asctime)s] [%(pathname)s:%(lineno)d] %(levelname)s - %(message)s',
         datefmt='%H:%M:%S'
     )
+    logger = logging.getLogger(name)
     if verbose:
         logger.setLevel(logging.DEBUG)
     return logger
