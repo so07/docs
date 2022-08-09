@@ -1,4 +1,12 @@
-# Matplotlib
+# Matplotlib: Visualization with Python
+
+https://matplotlib.org
+
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.
+
+[Example Gallery](https://matplotlib.org/stable/gallery/index)
+
+## Simple plot
 
 ```python
 import matplotlib.pyplot as plt
