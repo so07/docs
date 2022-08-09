@@ -1,5 +1,14 @@
 # Pandas
 
+https://pandas.pydata.org
+
+pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+built on top of the Python programming language.
+
+[User Guide](https://pandas.pydata.org/docs/user_guide/index.html)
+
+[API reference](https://pandas.pydata.org/docs/reference/index.html)
+
 ## Pandas Tricks
 
 ### Select row dataframe by value
