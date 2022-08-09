@@ -25,3 +25,12 @@ ax.legend()
 
 plt.savefig("fig.png", transparent=False)
 ```
+
+Useful colors:
+```python
+colors = ["#ff7f0e", "#1f77b4", "#d62728", "#2ca02c", "#9467bd", "#e377c2", "#17becf"]
+```
+Log scale:
+```python
+ax.set_xscale('log')
+```
