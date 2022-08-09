@@ -6,4 +6,5 @@
 * [cli](cli.md)
 * [pandas](pandas.md)
 * [logging](logging.md)
+* [matplotlib](matplotlib.md)
 * [miscellaneous](miscellaneous.md)
