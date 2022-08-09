@@ -32,3 +32,15 @@ falcon     True
 dog       False
 Name: num_wings, dtype: bool
 ```
+### Print pretty DataFrame
+
+```python
+from tabulate import tabulate
+
+def print_df(df, title=None):
+    """print dataframe in fancy mode"""
+    if title is not None:
+        print(title)
+    fmt = [".2f" if pd.api.types.is_float_dtype(i) else ".0f" for i in df.dtypes.values]
+    print(tabulate(df, headers='keys', tablefmt='psql', numalign="right", floatfmt=fmt, showindex=False))
+```
