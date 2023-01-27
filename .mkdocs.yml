@@ -1,0 +1,8 @@
+site_name: docs
+
+theme:
+  name: readthedocs
+  highlightjs: true
+
+plugins:
+  - search
