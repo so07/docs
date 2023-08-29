@@ -34,7 +34,7 @@ if verbose:
 ## Data structure
 
 ```python
-Data = namedtuple("Data", "label x y z")
+Data = namedtuple("Data", "label x y z") # MODIFY DATA
 
 logger.debug(f"data fields: {Data._fields}")
 ```
@@ -43,7 +43,7 @@ logger.debug(f"data fields: {Data._fields}")
 ## Parser
 
 ```python
-def parser(path, label="", suffix="log", sort_by="x"):
+def parser(path, label="", suffix="log", sort_by="x"): # MODIFY SORT_BY OPTION
 
     # list files
     ls = glob.glob(os.path.join(path, f"*.{suffix}"))
@@ -58,12 +58,12 @@ def parser(path, label="", suffix="log", sort_by="x"):
         with open(f) as fp:
             log = fp.read()
         # parse log
-        d = re.search("(?:TOKEN )(.+)(?: x )(.+)(?: y )(.+)(?: z)", log)
+        d = re.search("(?:TOKEN )(.+)(?: x )(.+)(?: y )(.+)(?: z)", log) # MODIFY PARSER
         logger.debug(f"match: {d}")
         if d:
             d = d.groups()
             logger.debug(f"groups: {d}")
-            d = Data(label, int(d[0]), float(d[1]), float(d[0]))
+            d = Data(label, int(d[0]), float(d[1]), float(d[0])) # MODIFY DATA TYPE
             logger.debug(f"data: {d}")
             ld.append(d)
 
@@ -87,7 +87,7 @@ def parser(path, label="", suffix="log", sort_by="x"):
 ## Read data
 
 ```python
-l = [
+l = [ # MODIFY PATH LIST
     ("path1", "key1"),
     ("path2", "key2"),
     ("path3", "key3"),
@@ -107,7 +107,7 @@ fig, ax = plt.subplots()
 
 for d in data:
 
-    ax.plot(d.x, d.y, lw=1.25, label=d.name)
+    ax.plot(d.x, d.y, lw=1.25, label=d.name) # MODIFY PLOT
     ax.legend()
 
     ax.set_yscale('log')
