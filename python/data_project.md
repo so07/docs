@@ -43,7 +43,7 @@ logger.debug(f"data fields: {Data._fields}")
 ## Parser
 
 ```python
-def parser(path, label="", suffix="log"):
+def parser(path, label="", suffix="log", sort_by="x"):
 
     # list files
     ls = glob.glob(os.path.join(path, f"*.{suffix}"))
@@ -70,7 +70,7 @@ def parser(path, label="", suffix="log"):
     logger.debug(f"found data: {ld}")
 
     # sort by a key
-    ld = sorted(ld, key=lambda k: k.x)
+    ld = sorted(ld, key=lambda k: getattr(k, sort_by))
     logger.debug(f"sorted data: {ld}")
 
     # from a list of data to dict of list
