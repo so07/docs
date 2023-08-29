@@ -78,7 +78,7 @@ def parser(path, label="", suffix="log"):
     logger.debug(f"data dict: {d}")
 
     # from dict to namedtuple
-    d = Data(label, d["x"], d["y"], d["z"])
+    d = Data(label, *[d[k] for k in Data._fields[1:]])
     logger.debug(f"return data: {d}")
 
     return d
