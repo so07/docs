@@ -114,3 +114,26 @@ for d in data:
 
 plt.savefig("fig.png", transparent=False)
 ```
+
+## Convert to DataFrame
+
+```python
+import pandas as pd
+
+def create_dataframe(data):
+    df = pd.DataFrame()
+    for d in data:
+        _df = pd.DataFrame.from_dict({k: getattr(d, k) for k in Data._fields})
+        df = pd.concat([df, _df], ignore_index=True)
+    return df
+```
+
+```python
+from tabulate import tabulate
+
+def print_df(df, title=None):
+    """print dataframe in fancy mode"""
+    if title is not None:
+        print(title)
+    print(tabulate(df, headers='keys', tablefmt='psql', numalign="right", floatfmt=".2f", showindex=False))
+```
